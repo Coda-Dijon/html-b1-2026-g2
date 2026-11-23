@@ -50,14 +50,19 @@ html {
 }
 
 .introduction {
-    text-align: justify;
-    margin: 2rem;
+    text-align: left;
+    max-width: 70ch;
+    gap: 0.75rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin: 2rem auto;
     font-size: 1.2rem;
+    border-left: 1.5px solid #f7b565;
     font-family: Georgia, serif;
 }
 
 .banniere {
-    background-image: url("/image.webp");
+    background-image: url("image.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -65,18 +70,34 @@ html {
 
 }
 
+.github::before {
+    content: "";
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    background: url("github.webp") center / contain no-repeat;
+}
+
 
 h1 {
     text-align: center;
     margin-bottom: 2.5rem;
-    font-size: 2rem;
+    font-size: clamp(1.25rem, 2vw + 1rem, 3rem);
     color: #ebac5f;
     padding: 3vh;
+    text-shadow:
+        -2px -2px 0 black,
+        2px -2px 0 black,
+        -2px 2px 0 black,
+        2px 2px 0 black;
 }
 
 h2 {
     font-size: 1.75rem;
     margin-top: 2rem;
+    margin-left: 4rem;
     text-decoration: underline;
 
 }
@@ -98,46 +119,103 @@ h3 {
     content: "🦵🏼";
 }
 
-
-
 .paragraphe {
     color: white
 }
 
 .link {
-    color: #b3f1f8;
+    color: #cbfaff;
+    text-align: center;
+
+}
+
+.link::before {
+    content: "➡️";
+}
+
+.link_nav {
+    color: #cbfaff;
+}
+
+.planning_conteneur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.planning {
+    text-align: center;
+    list-style: none;
+
+}
+
+.coach {
+    width: 18rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 25px rgba(247, 181, 101, 0.3);
+
+}
+
+.link:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: red;
+}
+
+.link:visited {
+    text-decoration: dashed;
+    font-style: italic;
 }
 
 footer {
+    width: 60%;
     margin-top: 10%;
+    margin-left: 20%;
     border-top: 2px solid #f7b565;
     display: flex;
     gap: 2rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 2%;
 }
+
+
 
 .footer_section {
     font-size: 1rem;
-    margin-left: 3rem;
+    margin-left: 15%;
     display: block;
 }
 
 .footer_section h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0rem;
+}
+
+@media (max-width: 30rem) {
+    footer {
+        margin-top: 10%;
+        border-top: 2px solid #f7b565;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer_section {
+        font-size: 1rem;
+        display: block;
+    }
+
+    .footer_section h3 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
 }
 
 .whoami {
     text-decoration: underline;
-}
-
-ul {
-    text-align: center;
-}
-
-h2 {
-    margin-left: 1rem;
-}
-
-li {
-    font-size: 1.5rem;
 }
