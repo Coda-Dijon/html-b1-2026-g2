@@ -2,10 +2,10 @@
 
 Membres du groupe :
 
-- A
-- B
-- C
-- D
+- A : Manuel Pussenot
+- B : Bastien Pierson
+- C : Thomas Chartrez
+- D : Théo Boschetti
 
 [Consignes](CONSIGNES.md)
 
