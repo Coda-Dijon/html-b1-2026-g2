@@ -6,63 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Planning 🏋🏼‍♂️</title>
-    <style>
-        @keyframes sparkle {
-            0% {
-                opacity: 0;
-                transform: scale(0);
-            }
 
-            50% {
-                opacity: 1;
-                transform: scale(1.5);
-            }
-
-            100% {
-                opacity: 0;
-                transform: scale(0);
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <header>
-        <h1>
+    <header class="banniere">
+        <h1 id="haut_de_page">
             Planning des séances à la salle de sport
         </h1>
-        <nav>formulaire de contact</nav> <!--a mettre en bas de page  LE FORMULAIRE PAS LE NAV -->
+
     </header>
 
     <main>
         <h2>
+            Introduction :
+        </h2>
+        <p class="introduction">
+            Une séance se déroule en plusieurs série d'un exercice avec un temps de repos entre chaque série et une
+            pause entre chaque exercice. Elle se concentre sur trois grandes catégories d'exercices, Pull (tirer) qui
+            travaille les muscles fléchisseurs du haut du corps (biceps, trapèse, dorsaux etc.)
+            Push (pousser) qui travaille les muscles extenseurs du haut du corps (triceps, pectoraux, abdominaux etc.)
+            et Legs (jambes) qui vise à développer le bas du corps (quadriceps, ischiojambiers, mollets etc.)
+        </p>
+        <h2>
             Planning des séances sur une semaine :
         </h2>
         <ul>
-            <h3>
-                Semaine :
-            </h3>
-            <h3>
+
+            <h3 class="Lundi">
                 Lundi :
             </h3>
             <!--est ce que à ce niveau là on met une image des muscle travaillée ou plus dans l'autre page ? -->
-            <li class="paragraphe">Consulter le planning de la séance Push <a class="link"
-                    href="https://example.org/">ici </a></li>
-            <h3>
+            <li>Consulter le planning de la séance Push <a class="link" href="https://example.org/">ici </a></li>
+            <h3 class="Mercredi">
                 Mercredi :
             </h3>
             <!--est ce que à ce niveau là on met une image des muscle travaillée ou plus dans l'autre page ? -->
-            <li class="paragraphe">Consulter le planning de la séance Pull <a class="link"
-                    href="https://example.org/">ici </a></li>
+            <li>Consulter le planning de la séance Pull <a class="link" href="https://example.org/">ici </a></li>
             <!--g commencé a mettre le début des classes dans le CSS-->
-            <h3>
+            <h3 class="Vendredi">
                 Vendredi :
             </h3>
             <!--est ce que à ce niveau là on met une image des muscle travaillée ou plus dans l'autre page ? -->
-            <li class="paragraphe">Consulter le planning de la séance Legs <a class="link"
-                    href="https://example.org/">ici </a></li>
+            <li>Consulter le planning de la séance Legs <a class="link" href="https://example.org/">ici </a></li>
         </ul>
-        <h3>
+        <h3 class="whoami">
             Qui sommes-nous:
         </h3>
 
@@ -74,15 +62,19 @@
     </main>
 
     <footer>
-        <section class="flex_name">
+        <section class="footer_section">
+            <h3>Navigation :</h3>
             <p>Nous contacter </p> <!--ici on peut mettre les cartes que vous avez créé si vous êtes cho -->
-            <p>Revenir à l'accueil </p>
+            <p>
+            <nav><a class="link" href="#haut_de_page">Revenir à l'accueil</a></nav>
+            </p>
         </section>
-        <section class="flex_name">
-            <a class="link" href="https://github.com/theoboschetti03">Theo Boschetti </a>
-            <a class="link" href="https://github.com/thomaschartrez">Thomas Chartrez </a>
-            <a class="link" href="https://github.com/ManuNecro">Manuel Pussenot </a>
-            <a class="link" href="https://github.com/piersonbastien52">Bastien Pierson </a>
+        <section class="footer_section">
+            <h3>Nos Github:</h3>
+            <p><a class="link" href="https://github.com/theoboschetti03">Theo Boschetti </a></p>
+            <p><a class="link" href="https://github.com/thomaschartrez">Thomas Chartrez </a></p>
+            <p><a class="link" href="https://github.com/ManuNecro">Manuel Pussenot </a></p>
+            <p><a class="link" href="https://github.com/piersonbastien52">Bastien Pierson </a></p>
         </section>
 
     </footer>

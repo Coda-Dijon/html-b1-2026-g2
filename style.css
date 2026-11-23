@@ -5,13 +5,6 @@
     box-sizing: border-box;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -33,30 +26,118 @@ select {
 /* end of css reset */
 
 html {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, rgba(15, 51, 96, 0.925) 100%);
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3360, #1f2a4f, #1a1a2e);
+    background-size: 400% 400%;
+    animation: degrade 10s ease infinite;
     color: rgb(247, 181, 101);
     min-height: 100vh;
     position: relative;
     font-family: 'Spectral', serif;
 }
 
+@keyframes degrade {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.introduction {
+    text-align: justify;
+    margin: 2rem;
+    font-size: 1.2rem;
+    font-family: Georgia, serif;
+}
+
+.banniere {
+    background-image: url("/image.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 15vh;
+
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    color: #ebac5f;
+    padding: 3vh;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    text-decoration: underline;
+
+}
+
+h3 {
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+.Lundi::before {
+    content: "💪🏼"
+}
+
+.Mercredi::before {
+    content: "🏋🏼‍♂️";
+}
+
+.Vendredi::before {
+    content: "🦵🏼";
+}
+
+
+
 .paragraphe {
-    color: #2C75FF;
     color: white
 }
 
-.link {}
-
-.flex_name {
-    display: flex;
-    gap: 0.75rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-
-
+.link {
+    color: #b3f1f8;
 }
 
 footer {
+    margin-top: 10%;
+    border-top: 2px solid #f7b565;
     display: flex;
-    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer_section {
+    font-size: 1rem;
+    margin-left: 3rem;
+    display: block;
+}
+
+.footer_section h3 {
+    font-size: 1.5rem;
+    margin: 0rem;
+}
+
+.whoami {
+    text-decoration: underline;
+}
+
+ul {
+    text-align: center;
+}
+
+h2 {
+    margin-left: 1rem;
+}
+
+li {
+    font-size: 1.5rem;
 }
