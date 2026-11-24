@@ -21,40 +21,33 @@
         <h2>
             Introduction :
         </h2>
-        <table class="tableau">
-            <caption>Entrainements</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Type</th>
-                    <th scope="col">Pull</th>
-                    <th scope="col">Push</th>
-                    <th scope="col">Legs</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Jour</th>
-                    <th scope="row">Lundi</th>
-                    <th scope="row"> Mercredi</th>
-                    <th scope="row">Vendredi</th>
-                </tr>
-                <tr>
-                    <th scope="row">Description</th>
-                    <th scope="row">Pull (tirer) qui travaille les muscles
-                        fléchisseurs du haut du corps (biceps, trapèse, dorsaux etc.).
-                    </th>
-                    <th scope="row">Push (pousser) qui travaille
-                        les muscles extenseurs du haut du corps
-                        (triceps, pectoraux, abdominaux etc.)
-                    </th>
+        <div class="main-card">
+            <section class="section-card">
+                <div class="div-card">
 
-                    <th scope="row">Legs (jambes) qui vise à
-                        développer le bas du corps (quadriceps, ischiojambiers,
-                        mollets etc.)
-                    </th>
-                </tr>
-            </tbody>
-        </table>
+                    <article class="article-card">
+                        <h3 class="card-title">Push</h3>
+                        <p>Push (pousser) qui travaille les muscles extenseurs
+                            du haut du corps
+                            (triceps, pectoraux, abdominaux etc.)</p>
+                    </article>
+
+                    <article class="article-card">
+                        <h3 class="card-title">Pull</h3>
+                        <p>Pull (tirer) qui travaille les muscles fléchisseurs du haut du corps
+                            (biceps, trapèse, dorsaux etc.).</p>
+                    </article>
+
+                    <article class="article-card">
+                        <h3 class="card-title">Legs</h3>
+                        <p>Legs (jambes) qui vise à développer le bas du corps
+                            (quadriceps, ischiojambiers, mollets etc.)</p>
+                    </article>
+                </div>
+            </section>
+
+
+        </div>
 
         <h2>
             Planning des séances sur une semaine :
@@ -76,6 +69,21 @@
             </ul>
             <img class="coach" src="./assets/coach.webp" alt="Baloo le chien coach sportif">
         </div>
+        <form action="#" method="POST">
+            <div class="form-row">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            </div>
+            <div class="form-row">
+                <label for="mail">Mail</label>
+                <input type="email" id="mail" name="mail" placeholder="votre@email.com" required>
+            </div>
+            <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Votre message..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
     </main>
     <footer>
         <section class="footer_section">
@@ -87,16 +95,17 @@
         </section>
         <section class="footer_section">
             <h3 class="github">Nos Github:</h3>
-            <p><a class="link" href="https://github.com/theoboschetti03" target="_blank"
-                    rel="noopener noreferrer">TheoBoschetti </a></p>
-            <p><a class="link" href="https://github.com/thomaschartrez" target="_blank"
-                    rel="noopener noreferrer">ThomasChartrez </a></p>
-            <p><a class="link" href="https://github.com/ManuNecro" target="_blank"
-                    rel="noopener noreferrer">ManuelPussenot </a></p>
-            <p><a class="link" href="https://github.com/greencat2048" target="_blank"
-                    rel="noopener noreferrer">KieranChevillard </a></p>
-            <p><a class="link" href="https://github.com/piersonbastien52" target="_blank"
-                    rel="noopener noreferrer">BastienPierson </a></p>
+            <a class="link" href="https://github.com/theoboschetti03" target="_blank"
+                rel="noopener noreferrer">Theo_Boschetti </a>
+            <a class="link" href="https://github.com/thomaschartrez" target="_blank"
+                rel="noopener noreferrer">Thomas_Chartrez </a>
+            <a class="link" href="https://github.com/ManuNecro" target="_blank"
+                rel="noopener noreferrer">Manuel_Pussenot
+            </a>
+            <a class="link" href="https://github.com/greencat2048" target="_blank"
+                rel="noopener noreferrer">Kieran_Chevillard </a>
+            <a class="link" href="https://github.com/piersonbastien52" target="_blank"
+                rel="noopener noreferrer">Bastien_Pierson </a>
         </section>
     </footer>
 </body>

@@ -137,7 +137,7 @@ h3 {
 .link {
     color: #cbfaff;
     text-align: center;
-    text-decoration: none;
+    display: block;
 }
 
 .link::before {
@@ -145,8 +145,8 @@ h3 {
 }
 
 .link_nav {
-    text-decoration: none;
     color: #cbfaff;
+    display: block;
 }
 
 .link_nav::before {
@@ -154,8 +154,7 @@ h3 {
 }
 
 .link_nav:hover {
-    text-decoration: none;
-    font-weight: bold;
+    transform: scale(1.05);
     color: #acde0b;
 
 }
@@ -169,9 +168,10 @@ h3 {
     max-width: 60rem;
     margin: 0 auto;
     flex-direction: column;
+    margin-top: 2rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 30rem) {
     .planning_conteneur {
         flex-direction: row;
     }
@@ -190,9 +190,8 @@ h3 {
 }
 
 .link:hover {
-    text-decoration: none;
-    font-weight: bold;
     color: #acde0b;
+    transform: scale(1.05);
 }
 
 .link:visited {
@@ -200,46 +199,128 @@ h3 {
     font-style: italic;
 }
 
+.grille_exos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 3rem 1rem 0;
+}
+
+.exos_ligne_1,
+.exos_ligne_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.text_ligne_1,
+.text_ligne_2 {
+    margin: 0.5rem 0;
+}
+
+.images_exos {
+    width: 200px;
+    max-width: 15rem;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
 @media (min-width: 30rem) {
 
-    .grille_exos {
-
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 15px;
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    .exos_ligne_1 {
-        grid-column: span 3;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .text_ligne_1 {
-        text-align: left;
-        margin-left: 4px 0;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-        text-align: center;
-
-    }
-
+    .exos_ligne_1,
     .exos_ligne_2 {
-        grid-column: span 3;
-        ;
+        flex-direction: row;
+        text-align: left;
     }
 
     .images_exos {
-        width: auto;
-        height: 10%;
-        display: block
+        width: 300px;
     }
-
 }
 
+@media (min-width: 48rem) {
+    .grille_exos {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 3rem 2rem 0;
+    }
+}
+
+form {
+    max-width: 480px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.form-row:has(textarea) {
+    align-items: start;
+}
+
+.form-row:has(textarea) label {
+    padding-top: 10px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0066cc;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.submit-btn:active {
+    background-color: #0052a3;
+}
+
+@media (min-width: 30rem) {
+    .mobile-form {
+        max-width: 800px;
+
+    }
+}
 
 footer {
     width: 60%;
@@ -257,7 +338,8 @@ footer {
     display: block;
 }
 
-p {
+.footer_section a {
+    text-align: left;
     margin-top: 10px;
 }
 
@@ -265,7 +347,6 @@ h3 {
     font-size: 1.5rem;
     margin: 0;
 }
-
 
 @media (min-width: 30rem) {
 
@@ -285,11 +366,16 @@ h3 {
     .footer_section {
         font-size: 1rem;
         margin-left: 15%;
-        display: block;
+        display: inline-block;
     }
 
-    p {
+    .footer_section a {
         margin-top: 3px;
+    }
+
+    a::after {
+        content: "";
+        display: block;
     }
 
     h3 {
@@ -301,80 +387,69 @@ h3 {
     text-decoration: underline;
 }
 
-/*test*/
-.intro_conteneur {
+* {
+    box-sizing: border-box;
+}
+
+.main-card {
+    width: 90%;
+    max-width: 768px;
+    margin: 40px auto;
+}
+
+.section-card {
+    margin-bottom: 40px;
+}
+
+.div-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.article-card {
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, #976315, #aa6e1a, #dd8915, #b57d0d, #9e5e10) 1;
+    padding: 16px;
+    background: transparent;
+    overflow: hidden;
+    color: #f7b565;
+    position: relative;
+}
+
+.card-title {
+    text-align: center;
+    margin-bottom: 1.7rem;
+}
+
+
+@media (min-width: 30rem) {
+    .div-card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .article-card {
+        font-size: 1, 5rem;
+    }
+}
+
+.intro_push {
     display: flex;
     flex-direction: column;
-    /* L'image reste au-dessus sur téléphone */
     align-items: center;
-    justify-content: center;
     gap: 2.5rem;
-    padding: 0 1.5rem;
-    margin-top: 2.5rem;
+    padding: 1.5rem;
 }
 
 @media (min-width: 48rem) {
-    .intro_conteneur {
+    .intro_push {
         flex-direction: row;
-        /* L'image passe à gauche du texte sur ordi */
-    }
-
-    .intro_conteneur .introduction {
-        margin: 2rem 0;
-        /* Annule le centrage auto qui forçait le retour à la ligne */
     }
 }
 
-
-table {
-    border-collapse: separate;
-    border-spacing: 6px;
-    width: fit-content;
-    max-width: 95vw;
-    margin: auto;
-    background: transparent;
-
-}
-
-th,
-td {
-    background: transparent;
-    border: 3px solid transparent;
-    border-image: linear-gradient(135deg, #976315, #aa6e1a, #dd8915, #b57d0d, #9e5e10) 1;
-    padding: 12px 16px;
-    color: rgb(247, 181, 101);
-    box-sizing: border-box;
-}
-
-th {
-    text-align: left;
-    font-size: 1.5rem;
-}
-
-caption {
-    text-align: center;
-    background: transparent;
-    border: 3px solid transparent;
-    border-image: linear-gradient(135deg, #976315, #aa6e1a, #dd8915, #b57d0d, #9e5e10) 1;
-    padding: 14px 18px;
-    font-size: 2rem;
-    color: rgb(247, 181, 101);
-    box-sizing: border-box;
-    width: calc(100% - 12px);
-    margin: 0 auto 8px auto;
-}
-
-.tableau {
-    text-align: left;
-    max-width: 70ch;
+.seance {
+    color: yellowgreen;
     margin: 2rem;
+    font-style: italic;
     font-size: 1.2rem;
-    font-family: 'Spectral', serif;
-}
-
-@media (min-width: 48rem) {
-
-    .tableau {
-        max-width: 40rem;
-    }
 }
