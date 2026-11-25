@@ -244,7 +244,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    text-align: center;
+    text-align: left;
 }
 
 .text_ligne_1,
@@ -264,7 +264,6 @@ h3 {
     .exos_ligne_1,
     .exos_ligne_2 {
         flex-direction: row;
-        text-align: left;
     }
 
     .images_exos {
@@ -500,15 +499,6 @@ footer {
         2px 2px 0 var(--couleur-contour);
 }
 
-/* Affichage du texte a gauche sur bigo */
-
-@media (max-width: 48rem) {
-
-    .grille_exos,
-    .infos_exo {
-        text-align: left;
-    }
-}
 
 
 b {
