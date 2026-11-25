@@ -20,12 +20,10 @@ button,
 textarea,
 select {
     font: inherit;
-    color: var(--couleur-formulaire);
+
 }
 
 /* end of css reset */
-
-/* ===== Variables de couleurs ===== */
 :root {
     --fond-1: #1a1a2e;
     --fond-2: #16213e;
@@ -37,7 +35,7 @@ select {
     --couleur-blanc: white;
     --couleur-contour: black;
     --couleur-accent: yellowgreen;
-    --couleur-accent-fonce: rgb(110, 151, 29);
+    --couleur-gras: rgb(165, 222, 50);
 
     --couleur-lien: #cbfaff;
     --couleur-survol: #acde0b;
@@ -45,7 +43,7 @@ select {
     --couleur-formulaire: #035096;
     --couleur-focus: #000204;
     --couleur-bouton: rgb(39, 130, 140);
-    --couleur-bouton-actif: rgb(29, 77, 91);
+    --couleur-bouton-actif: rgb(36, 109, 131);
     --couleur-bouton-texte: rgb(3, 2, 0);
 
     --degrade-or: linear-gradient(135deg, #976315, #aa6e1a, #dd8915, #b57d0d, #9e5e10);
@@ -247,28 +245,24 @@ h3 {
     text-align: left;
 }
 
+.titre_exos {
+    flex-basis: 100%;
+    text-align: left;
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--couleur-titre);
+}
+
 .text_ligne_1,
 .text_ligne_2 {
     margin: 0.5rem;
 }
 
 .images_exos {
-    width: 200px;
-    max-width: 15rem;
+    width: 20rem;
+    max-width: 25rem;
     height: auto;
     border-radius: 0.5rem;
-}
-
-@media (min-width: 30rem) {
-
-    .exos_ligne_1,
-    .exos_ligne_2 {
-        flex-direction: row;
-    }
-
-    .images_exos {
-        width: 300px;
-    }
 }
 
 @media (min-width: 48rem) {
@@ -277,6 +271,7 @@ h3 {
         margin: 3rem 2rem 0;
     }
 }
+
 
 form {
     max-width: 480px;
@@ -311,8 +306,11 @@ label {
     font-weight: 600;
 }
 
+select,
 input,
 textarea {
+    color: var(--couleur-formulaire);
+    background-color: #ffffff;
     width: 100%;
     padding: 10px;
     font-size: 14px;
@@ -320,6 +318,7 @@ textarea {
 }
 
 input:focus,
+select:focus,
 textarea:focus {
     border-color: var(--couleur-focus);
 }
@@ -342,7 +341,6 @@ textarea {
     background-color: var(--couleur-bouton-actif);
 }
 
-
 @media (min-width: 30rem) {
     form {
         max-width: 800px;
@@ -351,8 +349,7 @@ textarea {
 
 footer {
     width: 60%;
-    margin-top: 10%;
-    margin-left: 20%;
+    margin: 10%;
     border-top: 2px solid var(--couleur-texte);
     display: flex;
     flex-direction: column;
@@ -429,7 +426,7 @@ footer {
 }
 
 .section-card {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .div-card {
@@ -450,7 +447,7 @@ footer {
 
 .card-title {
     text-align: center;
-    margin-bottom: 1.7rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -460,7 +457,7 @@ footer {
     }
 
     .article-card {
-        font-size: 1, 5rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -468,7 +465,8 @@ footer {
     height: 17rem;
     width: auto;
     border-radius: 5%;
-    margin-left: 5rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -492,17 +490,15 @@ footer {
     margin: 2rem;
     font-style: italic;
     font-size: 1.2rem;
-    text-shadow:
-        -2px -2px 0 var(--couleur-contour),
+    text-shadow: -2px -2px 0 var(--couleur-contour),
         2px -2px 0 var(--couleur-contour),
         -2px 2px 0 var(--couleur-contour),
         2px 2px 0 var(--couleur-contour);
 }
 
 
-
 b {
-    color: var(--couleur-accent-fonce);
+    color: var(--couleur-gras);
 }
 
 /* Conseils */
@@ -527,8 +523,7 @@ b {
 .descriptif {
     font-weight: bold;
     color: var(--couleur-accent);
-    text-shadow:
-        -2px -2px 0 var(--couleur-contour),
+    text-shadow: -2px -2px 0 var(--couleur-contour),
         2px -2px 0 var(--couleur-contour),
         -2px 2px 0 var(--couleur-contour),
         2px 2px 0 var(--couleur-contour);
