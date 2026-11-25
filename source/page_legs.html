@@ -10,7 +10,7 @@
 
 <body>
     <header class="banniere">
-        <h1>
+        <h1 id="hautdepagelegs">
             Bienvenue dans la séance Legs !
         </h1>
     </header>
@@ -20,13 +20,14 @@
             Introduction :
         </h2>
         <div class="intro_push">
-            <img src="../assets/legs.webp" alt="Illustration séance Legs" class="coach">
+            <img src="../assets/legs.webp" alt="Illustration séance Legs" id="image_intro">
             <section class="introduction">
                 <p>
-                    La séance Legs (bas du corps) sollicite les plus grands groupes musculaires de l'organisme : les
-                    quadriceps, les ischio-jambiers, les fessiers et les mollets. En associant des mouvements
-                    polyarticulaires complets à des exercices d'isolation, cet entraînement développe la force globale,
-                    l'explosivité et la stabilité du corps.
+                    La séance <span class="descriptif">Legs (bas du corps) </span>sollicite les plus grands groupes
+                    musculaires de l'organisme :<span class="descriptif"> les quadriceps, les ischio-jambiers, les
+                        fessiers et les mollets.</span>
+                    En associant des mouvements polyarticulaires complets à des exercices d'isolation, cet entraînement
+                    <span class="descriptif"> développe la force globale, l'explosivité et la stabilité du corps.</span>
                 </p>
                 <p class="seance">La réalisation de chaque exercice est découpée en 4 séries de 12 répétitions, avec 30
                     secondes de récupération entre chaque série.</p>
@@ -38,9 +39,13 @@
                 <div class="infos_exo">
                     <p class="text_ligne_1">Debout sur la machine, épaules sous les coussins, l'avant des pieds sur la
                         marche, talons dans le vide.</p>
-                    <p class="text_ligne_1">1. Monter sur la pointe des pieds le plus haut possible en contractant les
+                    <p class="text_ligne_1 etape">1.&nbsp;&nbsp; Monter sur la pointe des pieds le plus haut possible en
+                        contractant
+                        les
                         mollets.</p>
-                    <p class="text_ligne_1">2. Redescendre lentement jusqu'à sentir l'étirement, talons sous le niveau
+                    <p class="text_ligne_1 etape">2.&nbsp;&nbsp; Redescendre lentement jusqu'à sentir l'étirement,
+                        talons sous le
+                        niveau
                         de la marche.</p>
                     <p class="text_ligne_1">Variante : sur une marche avec un haltère dans une main, une jambe après
                         l'autre.</p>
@@ -54,9 +59,12 @@
                 <div class="infos_exo">
                     <p class="text_ligne_1">Allongé sur le siège de la presse, dos et tête plaqués, pieds largeur
                         d'épaules sur la plateforme.</p>
-                    <p class="text_ligne_1">1. Déverrouiller la charge, puis plier les genoux pour descendre la
+                    <p class="text_ligne_1 etape">1.&nbsp;&nbsp; Déverrouiller la charge, puis plier les genoux pour
+                        descendre la
                         plateforme vers la poitrine.</p>
-                    <p class="text_ligne_1">2. Pousser avec les talons jusqu'à avoir les jambes presque tendues.</p>
+                    <p class="text_ligne_1 etape">2.&nbsp;&nbsp; Pousser avec les talons jusqu'à avoir les jambes
+                        presque tendues.
+                    </p>
                     <p class="text_ligne_1">Variante : pieds placés plus haut sur la plateforme pour cibler davantage
                         les fessiers et les ischio-jambiers.</p>
                     <p class="text_ligne_1">Conseil : ne jamais verrouiller les genoux en haut, et garder le bas du dos
@@ -69,9 +77,12 @@
                 <div class="infos_exo">
                     <p class="text_ligne_2">Debout, pieds largeur d'épaules, barre posée sur le haut du dos (trapèzes).
                     </p>
-                    <p class="text_ligne_2">1. Pousser les fesses en arrière et plier les genoux pour descendre jusqu'à
+                    <p class="text_ligne_2 etape">1.&nbsp;&nbsp; Pousser les fesses en arrière et plier les genoux pour
+                        descendre
+                        jusqu'à
                         avoir les cuisses parallèles au sol.</p>
-                    <p class="text_ligne_2">2. Remonter en poussant sur les talons jusqu'à être debout.</p>
+                    <p class="text_ligne_2 etape">2.&nbsp;&nbsp; Remonter en poussant sur les talons jusqu'à être
+                        debout.</p>
                     <p class="text_ligne_2">Variante : à la machine guidée (Smith machine), plus stable pour débuter.
                     </p>
                     <p class="text_ligne_2">Conseil : dos droit, regard devant, et genoux dans l'alignement des pointes
@@ -84,9 +95,13 @@
                 <div class="infos_exo">
                     <p class="text_ligne_2">Debout face à la machine, mains sur les poignées, le talon d'une jambe placé
                         contre le rouleau.</p>
-                    <p class="text_ligne_2">1. Pousser la jambe vers l'arrière en contractant le fessier, sans cambrer
+                    <p class="text_ligne_2 etape">1.&nbsp;&nbsp; Pousser la jambe vers l'arrière en contractant le
+                        fessier, sans
+                        cambrer
                         le dos.</p>
-                    <p class="text_ligne_2">2. Revenir lentement à la position de départ, puis changer de jambe.</p>
+                    <p class="text_ligne_2 etape">2.&nbsp;&nbsp; Revenir lentement à la position de départ, puis changer
+                        de jambe.
+                    </p>
                     <p class="text_ligne_2">Variante : à la poulie basse avec une sangle de cheville.</p>
                     <p class="text_ligne_2">Conseil : le bassin reste fixe, seule la jambe bouge.</p>
                 </div>
@@ -98,8 +113,12 @@
         <section class="footer_section">
             <h3>Navigation:</h3>
             <nav>
-                <p>Nous contacter </p>
+                <a class="link_nav" href="../index.html#formulaire">Nous contacter </a>
                 <a class="link_nav" href="../index.html">Revenir à l'accueil</a>
+                <p>Les séances:</p>
+                <a class="link_nav" href="page_push.html">Séance push</a>
+                <a class="link_nav" href="page_push.html">Séance pull</a>
+                <a class="link_nav" href="#hautdepagelegs">Séance legs</a>
             </nav>
         </section>
         <section class="footer_section">

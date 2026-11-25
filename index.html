@@ -22,29 +22,29 @@
             Introduction :
         </h2>
         <div class="main-card">
-            <section class="section-card">
-                <div class="div-card">
+            <div class="section-card">
+                <section class="div-card">
 
                     <article class="article-card">
                         <h3 class="card-title">Push</h3>
-                        <p><b>Push</b> (pousser) qui travaille les <b>les muscles fléchisseurs
+                        <p>Push (pousser) qui travaille les <b>muscles extenseurs
                                 du haut du corps</b>
                             (triceps, pectoraux, abdominaux etc.)</p>
                     </article>
 
                     <article class="article-card">
                         <h3 class="card-title">Pull</h3>
-                        <p><b>Pull</b> (tirer) qui travaille les <b>muscles fléchisseurs du haut du corps</b>
+                        <p>Pull (tirer) qui travaille les <b>muscles fléchisseurs du haut du corps</b>
                             (biceps, trapèse, dorsaux etc.).</p>
                     </article>
 
                     <article class="article-card">
                         <h3 class="card-title">Legs</h3>
-                        <p><b>Legs</b> (jambes) qui vise à <b>développer le bas du corps</b>
+                        <p>Legs (jambes) qui vise à <b>développer le bas du corps</b>
                             (quadriceps, ischiojambiers, mollets etc.)</p>
                     </article>
-                </div>
-            </section>
+                </section>
+            </div>
 
 
         </div>
@@ -69,14 +69,15 @@
             </ul>
             <img class="coach" src="./assets/coach.webp" alt="Baloo le chien coach sportif">
         </div>
-        <form action="#" method="POST">
+        <form action="#" method="POST" id="formulaire">
             <div class="form-row">
                 <label for="nom">Nom</label>
                 <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
             </div>
             <div class="form-row">
                 <label for="mail">Mail</label>
-                <input type="email" id="mail" name="mail" placeholder="@email.com" required>
+                <input pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" type="email" id="mail" name="mail"
+                    placeholder="@email.com" required>
             </div>
             <div class="form-row">
                 <label for="message">Message</label>
@@ -89,8 +90,12 @@
         <section class="footer_section">
             <h3>Navigation:</h3>
             <nav>
-                <p>Nous contacter </p>
+                <a class="link_nav" href="#formulaire">Nous contacter </a>
                 <a class="link_nav" href="#haut_de_page">Revenir à l'accueil</a>
+                <p>Les séances:</p>
+                <a class="link_nav" href="./source/page_push.html">Séance push</a>
+                <a class="link_nav" href="./source/page_pull.html">Séance pull</a>
+                <a class="link_nav" href="./source/page_legs.html">Séance legs</a>
             </nav>
         </section>
         <section class="footer_section">

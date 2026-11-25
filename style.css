@@ -20,16 +20,43 @@ button,
 textarea,
 select {
     font: inherit;
-    color: #035096;
+    color: var(--couleur-formulaire);
 }
 
 /* end of css reset */
 
+/* ===== Variables de couleurs ===== */
+:root {
+    --fond-1: #1a1a2e;
+    --fond-2: #16213e;
+    --fond-3: #0f3360;
+    --fond-4: #1f2a4f;
+
+    --couleur-texte: #f7b565;
+    --couleur-titre: #ebac5f;
+    --couleur-blanc: white;
+    --couleur-contour: black;
+    --couleur-accent: yellowgreen;
+    --couleur-accent-fonce: rgb(110, 151, 29);
+
+    --couleur-lien: #cbfaff;
+    --couleur-survol: #acde0b;
+
+    --couleur-formulaire: #035096;
+    --couleur-focus: #000204;
+    --couleur-bouton: rgb(39, 130, 140);
+    --couleur-bouton-actif: rgb(29, 77, 91);
+    --couleur-bouton-texte: rgb(3, 2, 0);
+
+    --degrade-or: linear-gradient(135deg, #976315, #aa6e1a, #dd8915, #b57d0d, #9e5e10);
+}
+
+
 html {
-    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3360, #1f2a4f, #1a1a2e);
+    background: linear-gradient(135deg, var(--fond-1), var(--fond-2), var(--fond-3), var(--fond-4), var(--fond-1));
     background-size: 400% 400%;
     animation: degrade 10s ease infinite;
-    color: rgb(247, 181, 101);
+    color: var(--couleur-texte);
     min-height: 100vh;
     position: relative;
     font-family: 'Spectral', serif;
@@ -75,13 +102,13 @@ h1 {
     text-align: center;
     margin-bottom: 2.5rem;
     font-size: clamp(1.25rem, 2vw + 1rem, 3rem);
-    color: #ebac5f;
+    color: var(--couleur-titre);
     padding: 3vh;
     text-shadow:
-        -2px -2px 0 black,
-        2px -2px 0 black,
-        -2px 2px 0 black,
-        2px 2px 0 black;
+        -2px -2px 0 var(--couleur-contour),
+        2px -2px 0 var(--couleur-contour),
+        -2px 2px 0 var(--couleur-contour),
+        2px 2px 0 var(--couleur-contour);
 }
 
 
@@ -134,11 +161,11 @@ h3 {
 }
 
 .paragraphe {
-    color: white
+    color: var(--couleur-blanc)
 }
 
 .link {
-    color: #cbfaff;
+    color: var(--couleur-lien);
     text-align: center;
     display: block;
 }
@@ -149,7 +176,7 @@ h3 {
 }
 
 .link_nav {
-    color: #cbfaff;
+    color: var(--couleur-lien);
     display: block;
 }
 
@@ -160,7 +187,7 @@ h3 {
 
 .link_nav:hover {
     transform: scale(1.05);
-    color: #acde0b;
+    color: var(--couleur-survol);
 
 }
 
@@ -195,7 +222,7 @@ h3 {
 }
 
 .link:hover {
-    color: #acde0b;
+    color: var(--couleur-survol);
     transform: scale(1.05);
 }
 
@@ -222,7 +249,7 @@ h3 {
 
 .text_ligne_1,
 .text_ligne_2 {
-    margin: 0.5rem 0;
+    margin: 0.5rem;
 }
 
 .images_exos {
@@ -260,7 +287,7 @@ form {
     padding: 20px;
     border-radius: 10px;
     border: 3px solid transparent;
-    border-image: linear-gradient(135deg, #976315, #aa6e1a, #dd8915, #b57d0d, #9e5e10) 1;
+    border-image: var(--degrade-or) 1;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
@@ -295,7 +322,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border-color: #000204;
+    border-color: var(--couleur-focus);
 }
 
 textarea {
@@ -305,15 +332,15 @@ textarea {
 .submit-btn {
     width: 100%;
     padding: 12px;
-    background-color: rgb(39, 130, 140);
-    color: rgb(3, 2, 0);
+    background-color: var(--couleur-bouton);
+    color: var(--couleur-bouton-texte);
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
 }
 
 .submit-btn:active {
-    background-color: rgb(29, 77, 91);
+    background-color: var(--couleur-bouton-actif);
 }
 
 
@@ -327,7 +354,7 @@ footer {
     width: 60%;
     margin-top: 10%;
     margin-left: 20%;
-    border-top: 2px solid #f7b565;
+    border-top: 2px solid var(--couleur-texte);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -344,9 +371,14 @@ footer {
     margin-top: 10px;
 }
 
-h3 {
+.footer_section h3 {
     font-size: 1.5rem;
     margin: 0;
+}
+
+.footer_section p {
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
 
 @media (min-width: 30rem) {
@@ -360,7 +392,7 @@ h3 {
         padding-left: 10%;
         padding-right: 10%;
         margin-bottom: 2%;
-        border-top: 2px solid #f7b565;
+        border-top: 2px solid var(--couleur-texte);
     }
 
     .footer_section {
@@ -409,11 +441,11 @@ h3 {
 
 .article-card {
     border: 3px solid transparent;
-    border-image: linear-gradient(135deg, #976315, #aa6e1a, #dd8915, #b57d0d, #9e5e10) 1;
+    border-image: var(--degrade-or) 1;
     padding: 16px;
     background: transparent;
     overflow: hidden;
-    color: #f7b565;
+    color: var(--couleur-texte);
     position: relative;
 }
 
@@ -433,12 +465,21 @@ h3 {
     }
 }
 
+#image_intro {
+    height: 17rem;
+    width: auto;
+    border-radius: 5%;
+    margin-left: 5rem;
+}
+
+
 .intro_push {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
     padding: 1.5rem;
+
 }
 
 @media (min-width: 48rem) {
@@ -448,8 +489,57 @@ h3 {
 }
 
 .seance {
-    color: yellowgreen;
+    color: var(--couleur-accent);
     margin: 2rem;
     font-style: italic;
     font-size: 1.2rem;
+    text-shadow:
+        -2px -2px 0 var(--couleur-contour),
+        2px -2px 0 var(--couleur-contour),
+        -2px 2px 0 var(--couleur-contour),
+        2px 2px 0 var(--couleur-contour);
+}
+
+/* Affichage du texte a gauche sur bigo */
+
+@media (max-width: 48rem) {
+
+    .grille_exos,
+    .infos_exo {
+        text-align: left;
+    }
+}
+
+
+b {
+    color: var(--couleur-accent-fonce);
+}
+
+/* Conseils */
+
+.infos_exo p:last-child {
+    margin-top: 0.8rem;
+    padding: 0.6rem 0.9rem;
+    background-color: rgba(244, 150, 35, 0.12);
+    border-left: 3px solid var(--couleur-texte);
+    border-radius: 0 6px 6px 0;
+    color: var(--couleur-lien);
+    font-style: italic;
+
+}
+
+/* Etape */
+
+.etape {
+    margin-left: 1.25rem;
+}
+
+.descriptif {
+    font-weight: bold;
+    color: var(--couleur-accent);
+    text-shadow:
+        -2px -2px 0 var(--couleur-contour),
+        2px -2px 0 var(--couleur-contour),
+        -2px 2px 0 var(--couleur-contour),
+        2px 2px 0 var(--couleur-contour);
 }
