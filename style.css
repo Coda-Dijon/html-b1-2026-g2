@@ -25,33 +25,18 @@ select {
 
 /* end of css reset */
 :root {
-    --fond-1: #1a1a2e;
-    --fond-2: #16213e;
-    --fond-3: #0f3360;
-    --fond-4: #1f2a4f;
-
     --couleur-texte: #f7b565;
     --couleur-titre: #ebac5f;
-    --couleur-blanc: white;
     --couleur-contour: black;
     --couleur-accent: yellowgreen;
-    --couleur-gras: rgb(165, 222, 50);
-
     --couleur-lien: #cbfaff;
     --couleur-survol: #acde0b;
-
-    --couleur-formulaire: #035096;
-    --couleur-focus: #000204;
-    --couleur-bouton: rgb(39, 130, 140);
-    --couleur-bouton-actif: rgb(36, 109, 131);
-    --couleur-bouton-texte: rgb(3, 2, 0);
-
     --degrade-or: linear-gradient(135deg, #976315, #aa6e1a, #dd8915, #b57d0d, #9e5e10);
 }
 
 
 html {
-    background: linear-gradient(135deg, var(--fond-1), var(--fond-2), var(--fond-3), var(--fond-4), var(--fond-1));
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3360, #1f2a4f, #1a1a2e);
     background-size: 400% 400%;
     animation: degrade 10s ease infinite;
     color: var(--couleur-texte);
@@ -159,7 +144,7 @@ h3 {
 }
 
 .paragraphe {
-    color: var(--couleur-blanc)
+    color: white
 }
 
 .link {
@@ -309,7 +294,7 @@ label {
 select,
 input,
 textarea {
-    color: var(--couleur-formulaire);
+    color: #035096;
     background-color: #ffffff;
     width: 100%;
     padding: 10px;
@@ -320,7 +305,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: var(--couleur-focus);
+    border-color: #000204;
 }
 
 textarea {
@@ -330,15 +315,15 @@ textarea {
 .submit-btn {
     width: 100%;
     padding: 12px;
-    background-color: var(--couleur-bouton);
-    color: var(--couleur-bouton-texte);
+    background-color: rgb(39, 130, 140);
+    color: rgb(3, 2, 0);
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
 }
 
 .submit-btn:active {
-    background-color: var(--couleur-bouton-actif);
+    background-color: rgb(36, 109, 131);
 }
 
 @media (min-width: 30rem) {
@@ -461,12 +446,16 @@ footer {
     }
 }
 
+.introduction {
+    max-width: 70ch;
+    text-align: left;
+}
+
 #image_intro {
     height: 17rem;
     width: auto;
     border-radius: 5%;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 
 
@@ -476,6 +465,7 @@ footer {
     align-items: center;
     gap: 2.5rem;
     padding: 1.5rem;
+    justify-content: center;
 
 }
 
@@ -498,7 +488,7 @@ footer {
 
 
 b {
-    color: var(--couleur-gras);
+    color: rgb(165, 222, 50);
 }
 
 /* Conseils */
