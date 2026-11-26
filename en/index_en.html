@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Schedule 🏋🏼‍♂️</title>
+
+</head>
+
+<body>
+    <header class="banniere">
+        <h1 id="haut_de_page">
+            Gym session schedule
+        </h1>
+        <details id="banniere_langue">
+            <summary>EN ▾</summary>
+            <ul>
+                <li><a href="../index.html" class="link">FR</a></li>
+                <li><a href="../../index_en.html" class="link">EN</a></li>
+            </ul>
+        </details>
+    </header>
+
+    <main>
+        <h2>
+            Introduction:
+        </h2>
+        <div class="main-card">
+            <div class="section-card">
+                <section class="div-card">
+
+                    <article class="article-card">
+                        <h3 class="card-title">Push</h3>
+                        <p>Push, which works the <b>extensor muscles of the upper body</b>
+                            (triceps, chest, abs, etc.)</p>
+                    </article>
+
+                    <article class="article-card">
+                        <h3 class="card-title">Pull</h3>
+                        <p>Pull, which works the <b>flexor muscles of the upper body</b>
+                            (biceps, traps, lats, etc.).</p>
+                    </article>
+
+                    <article class="article-card">
+                        <h3 class="card-title">Legs</h3>
+                        <p>Legs, which aims to <b>develop the lower body</b>
+                            (quadriceps, hamstrings, calves, etc.)</p>
+                    </article>
+                </section>
+            </div>
+
+
+        </div>
+
+        <h2>
+            Weekly session schedule:
+        </h2>
+        <div class="planning_conteneur">
+            <ul class="planning">
+                <li>
+                    <h3 class="Lundi">Monday:</h3>
+                    <a class="link" href="./source/page_push_en.html">View the Push session plan</a>
+                </li>
+                <li>
+                    <h3 class="Mercredi">Wednesday:</h3>
+                    <a class="link" href="./source/page_pull_en.html">View the Pull session plan</a>
+                </li>
+                <li>
+                    <h3 class="Vendredi">Friday:</h3>
+                    <a class="link" href="./source/page_legs_en.html">View the Legs session plan</a>
+                </li>
+            </ul>
+            <a
+                href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2IyeHAwdDQxbXI4bTJxajM4bjNzdHBiZDk5YzUwdjQxNmt4ZzBsMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/UoTiYh27n5nnmVjAi6/giphy.gif">
+                <img class="coach" src="../assets/coach.webp" alt="Baloo the dog, fitness coach" loading="lazy">
+            </a>
+        </div>
+        <form action="#" method="POST" id="formulaire">
+            <div class="form-row">
+                <label for="nom">Name</label>
+                <input type="text" id="nom" name="nom" placeholder="Your name" required>
+            </div>
+            <div class="form-row">
+                <label for="mail">Email</label>
+                <input pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" type="email" id="mail" name="mail"
+                    placeholder="@email.com" required>
+            </div>
+            <div class="form-row">
+                <label for="type">Subject</label>
+                <select name="type" id="type">
+                    <option value="" disabled selected>-- Select an option --</option>
+                    <option value="Legs">Legs</option>
+                    <option value="Push">Push</option>
+                    <option value="Pull">Pull</option>
+                    <option value="Autres">Other</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+    </main>
+    <footer>
+        <section class="footer_section">
+            <h3>Navigation:</h3>
+            <nav>
+                <a class="link_nav" href="#formulaire">Contact us </a>
+                <a class="link_nav" href="#haut_de_page">Back to home</a>
+                <a class="link_nav" href="./source/page_push_en.html">Push session</a>
+                <a class="link_nav" href="./source/page_pull_en.html">Pull session</a>
+                <a class="link_nav" href="./source/page_legs_en.html">Legs session</a>
+            </nav>
+        </section>
+        <section class="footer_section">
+            <h3 class="github">Group 2 GitHub:</h3>
+            <a class="link" href="https://github.com/theoboschetti03" target="_blank"
+                rel="noopener noreferrer">Theo_Boschetti </a>
+            <a class="link" href="https://github.com/thomaschartrez" target="_blank"
+                rel="noopener noreferrer">Thomas_Chartrez </a>
+            <a class="link" href="https://github.com/ManuNecro" target="_blank"
+                rel="noopener noreferrer">Manuel_Pussenot
+            </a>
+            <a class="link" href="https://github.com/greencat2048" target="_blank"
+                rel="noopener noreferrer">Kieran_Chevillard </a>
+            <a class="link" href="https://github.com/piersonbastien52" target="_blank"
+                rel="noopener noreferrer">Bastien_Pierson </a>
+        </section>
+        <section class="footer_section">
+            <h3>W3C and Speedlify:</h3>
+            <a class="link"
+                href=" https://validator.w3.org/nu/?showoutline=yes&showimagereport=yes&level=warning&doc=https://coda-dijon.github.io/html-b1-2026-g2/"
+                target="_blank" rel="noopener noreferrer">W3C</a>
+            <a class="link"
+                href="https://speedlify-b1-2026-coda.baldir.fr/site/coda--dijon-github-io-html--b1--2026--g2/"
+                target="_blank" rel="noopener noreferrer">Speedify
+            </a>
+        </section>
+    </footer>
+</body>
+
+</html>

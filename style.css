@@ -34,6 +34,12 @@ select {
     --degrade-or: linear-gradient(135deg, #976315, #aa6e1a, #dd8915, #b57d0d, #9e5e10);
 }
 
+@media (prefers-color-scheme: light) {
+    :root {}
+
+    html {}
+}
+
 
 html {
     background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3360, #1f2a4f, #1a1a2e);
@@ -59,15 +65,34 @@ html {
     }
 }
 
-
 .banniere {
+    position: relative;
     background-image: url("./assets/banniere.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
     min-height: 15vh;
+    padding-right: 6rem;
 }
 
+#banniere_langue {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 3.7rem;
+    background-color: #13315c;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 3px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+#banniere_langue ul {
+    list-style: none;
+}
 
 .github::before {
     content: "";
@@ -79,6 +104,7 @@ html {
     vertical-align: middle;
     background: url("./assets/github.svg") center / contain no-repeat;
 }
+
 
 
 h1 {
@@ -333,23 +359,18 @@ textarea {
 }
 
 footer {
-    width: 60%;
-    margin: 10%;
+    width: min(85%, 120rem);
+    margin: 6rem auto 2rem;
+    padding-top: 2rem;
     border-top: 2px solid var(--couleur-texte);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
-
 .footer_section {
+    padding-left: 30%;
     font-size: 1rem;
-    display: block;
-}
-
-.footer_section a {
-    text-align: left;
-    margin-top: 10px;
 }
 
 .footer_section h3 {
@@ -358,43 +379,35 @@ footer {
 }
 
 .footer_section p {
-    font-size: 1.5rem;
-    margin-top: 10px;
+    font-size: 1rem;
+    margin-top: 0.6rem;
+}
+
+.footer_section a {
+    display: block;
+    text-align: left;
+    margin-top: 0.6rem;
 }
 
 @media (min-width: 30rem) {
-
     footer {
-        display: flex;
-        flex-direction: row;
-        margin-top: 10%;
-        margin-left: 20%;
-        gap: 2rem;
-        padding-left: 10%;
-        padding-right: 10%;
-        margin-bottom: 2%;
-        border-top: 2px solid var(--couleur-texte);
+        width: min(75%, 120rem);
+        margin: 8rem auto 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+        gap: 2.5rem;
     }
 
-    .footer_section {
-        font-size: 1rem;
-        margin-left: 15%;
-        display: inline-block;
+    .footer_section h3 {
+        font-size: 1.75rem;
     }
 
     .footer_section a {
-        margin-top: 3px;
-    }
-
-    a::after {
-        content: "";
-        display: block;
-    }
-
-    h3 {
-        font-size: 2rem;
+        margin-top: 0.4rem;
     }
 }
+
 
 .whoami {
     text-decoration: underline;
@@ -517,4 +530,39 @@ b {
         2px -2px 0 var(--couleur-contour),
         -2px 2px 0 var(--couleur-contour),
         2px 2px 0 var(--couleur-contour);
+}
+
+/*test*/
+
+.banniere {
+    position: relative;
+    background-image: url("./assets/banniere.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    min-height: 15vh;
+    padding-right: 6rem;
+}
+
+#banniere_theme {
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    /* Même alignement à droite que #banniere_langue */
+    width: 3.5rem;
+    /* Même largeur que #banniere_langue pour un alignement propre */
+    z-index: 1;
+    /* Reste derrière la liste FR/EN quand on l'ouvre */
+    background-color: #13315c;
+    color: var(--couleur-texte);
+    border: 1px solid var(--couleur-texte);
+    border-radius: 4px;
+    padding: 0.1rem 0;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+#banniere_theme:hover {
+    color: var(--couleur-survol);
+    border-color: var(--couleur-survol);
 }
